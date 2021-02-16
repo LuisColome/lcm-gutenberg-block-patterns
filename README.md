@@ -25,3 +25,5 @@ A simple plugin to add Block Patterns and Block Patterns Custom categories to Gu
 
 
 #### Current result
+
+![Block Pattern example](https://luiscolome.com/wp-content/uploads/columnas-parrafos.png)
