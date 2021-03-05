@@ -18,7 +18,7 @@
  * @param  string $url Request URL
  * @return array Amended request arguments
  */
-function be_dont_update_core_func_plugin( $r, $url ) {
+function lcm_dont_update_block_patterns_plugin( $r, $url ) {
     if ( 0 !== strpos( $url, 'https://api.wordpress.org/plugins/update-check/1.1/' ) )
     return $r; // Not a plugin update request. Bail immediately.
     $plugins = json_decode( $r['body']['plugins'], true );
@@ -26,7 +26,7 @@ function be_dont_update_core_func_plugin( $r, $url ) {
     $r['body']['plugins'] = json_encode( $plugins );
     return $r;
 }
-add_filter( 'http_request_args', 'be_dont_update_core_func_plugin', 5, 2 );
+add_filter( 'http_request_args', 'lcm_dont_update_block_patterns_plugin', 5, 2 );
 
 /**
  * Register a pattern category
